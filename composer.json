@@ -1,0 +1,6 @@
+{
+  "require": {
+    "j4mie/idiorm": "1.5.*",
+    "indieauth/client": ">=0.2.0"
+  }
+}
