@@ -1,6 +1,20 @@
 {
+  "license": "MIT",
   "require": {
     "j4mie/idiorm": "1.5.*",
-    "indieauth/client": ">=0.2.0"
+    "indieauth/client": ">=0.2.0",
+    "league/plates": "^3.3",
+    "league/route": "1.*",
+    "p3k/multipart": "*",
+    "filp/whoops": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "SocialDashboard\\Controllers\\": "app/controllers/"
+    },
+    "files": [
+      "lib/config.php",
+      "lib/helpers.php"
+    ]
   }
 }
