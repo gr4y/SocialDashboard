@@ -31,7 +31,6 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
             'Symfony\\Polyfill\\Php54\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\HttpFoundation\\' => 33,
-            'SocialDashboard\\Controllers\\' => 28,
         ),
         'P' => 
         array (
@@ -46,6 +45,10 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         'F' => 
         array (
             'FastRoute\\' => 10,
+        ),
+        'C' => 
+        array (
+            'Controllers\\' => 12,
         ),
     );
 
@@ -70,10 +73,6 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
         ),
-        'SocialDashboard\\Controllers\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app/controllers',
-        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -93,6 +92,10 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+        ),
+        'Controllers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/controllers',
         ),
     );
 

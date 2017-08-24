@@ -2,17 +2,13 @@
 chdir(dirname(__FILE__).'/..');
 require 'vendor/autoload.php';
 
-echo "<pre>";
-var_dump(get_declared_classes());
-echo "</pre>";
-
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 // Pretty Exception Handling by Whoops
-// $whoops = new \Whoops\Run;
-// $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-// $whoops->register();
+$whoops = new \Whoops\Run;
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->register();
 
 // initialize router
 $router = new League\Route\RouteCollection();

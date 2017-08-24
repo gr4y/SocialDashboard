@@ -11,10 +11,10 @@ return array(
     'Symfony\\Polyfill\\Php54\\' => array($vendorDir . '/symfony/polyfill-php54'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
-    'SocialDashboard\\Controllers\\' => array($baseDir . '/app/controllers'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'League\\Route\\' => array($vendorDir . '/league/route/src'),
     'League\\Plates\\' => array($vendorDir . '/league/plates/src'),
     'League\\Container\\' => array($vendorDir . '/league/container/src'),
     'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),
+    'Controllers\\' => array($baseDir . '/app/controllers'),
 );
