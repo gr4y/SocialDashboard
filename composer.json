@@ -10,7 +10,7 @@
   },
   "autoload": {
     "psr-4": {
-      "SocialDashboard\\Controllers\\": "app/controllers/"
+      "Controllers\\": "app/controllers/"
     },
     "files": [
       "lib/config.php",

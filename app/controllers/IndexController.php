@@ -1,8 +1,9 @@
 <?php
-namespace SocialDashboard\Controllers;
+namespace Controllers;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use ORM;
 
 /*
  * This is the Main Controller

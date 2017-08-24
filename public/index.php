@@ -21,7 +21,7 @@ $router = new League\Route\RouteCollection();
 $templates = new League\Plates\Engine(dirname(__FILE__).'/../app/views');
 
 // add routes
-$router->addRoute('GET', '/', 'SocialDashboard\\Controllers\\IndexController::index');
+$router->addRoute('GET', '/', 'Controllers\IndexController::index');
 
 // get dispatcher from router
 $dispatcher = $router->getDispatcher();

@@ -1,6 +1,6 @@
 <?php
 
-// namespace SocialDashboard\Controllers;
+namespace Controllers;
 
 use ORM;
 
