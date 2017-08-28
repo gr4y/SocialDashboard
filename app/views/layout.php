@@ -19,32 +19,5 @@
       </div>
     </div>
 
-    <div class="ui two column stackable grid">
-      <div class="column">
-        <div class="ui segment">Content</div>
-      </div>
-      <div class="column">
-        <div class="ui segment">Content</div>
-      </div>
-
-      <div class="three column row">
-        <div class="column">
-          <div class="ui segment">Content</div>
-        </div>
-        <div class="column">
-          <div class="ui segment">Content</div>
-        </div>
-        <div class="column">
-          <div class="ui segment">Content</div>
-        </div>
-      </div>
-
-      <div class="ten wide column">
-        <div class="ui segment">Content</div>
-      </div>
-      <div class="six wide column">
-        <div class="ui segment">Content</div>
-      </div>
-    </div>
   </body>
 </html>
