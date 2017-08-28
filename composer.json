@@ -10,7 +10,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Controllers\\": "app/controllers/"
+      "Controllers\\": "app/controllers/",
+      "Models\\": "app/models/"
     },
     "files": [
       "lib/config.php",

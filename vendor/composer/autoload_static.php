@@ -36,6 +36,10 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         array (
             'Psr\\Log\\' => 8,
         ),
+        'M' => 
+        array (
+            'Models\\' => 7,
+        ),
         'L' => 
         array (
             'League\\Route\\' => 13,
@@ -76,6 +80,10 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/models',
         ),
         'League\\Route\\' => 
         array (
