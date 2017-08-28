@@ -11,9 +11,7 @@ use Models;
 class IndexController extends ApplicationController {
 
   public function index(Request $request, Response $response) {
-    $response->setContent(view('index', [
-      'title' => 'Holy Fuck, this is awesome'
-    ]));
+    $response->setContent(view('index'));
     return $response;
   }
 
