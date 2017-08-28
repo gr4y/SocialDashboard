@@ -10,13 +10,12 @@ $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
-// initialize router
-$router = new League\Route\RouteCollection();
-
 // initialize template engine
 $templates = new League\Plates\Engine(dirname(__FILE__).'/../app/views');
 
-// add routes
+// initialize router
+$router = new League\Route\RouteCollection;
+
 $router->addRoute('GET', '/', 'Controllers\IndexController::index');
 
 // get dispatcher from router
