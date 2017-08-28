@@ -2,7 +2,7 @@
 
 namespace Controllers;
 
-use ORM;
+use \Models;
 
 class ApplicationController {
 
