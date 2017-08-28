@@ -9,7 +9,7 @@
     <script src="jquery-3.2.1.js" charset="utf-8"></script>
     <script src="semantic-ui/semantic.min.js" charset="utf-8"></script>
 
-    <title>Social Dashboard - <?= $this->e($title); ?></title>
+    <title>Social Dashboard <?= (isset($title) ? $this->e("- " . $title): "") ?></title>
   </head>
   <body>
 
