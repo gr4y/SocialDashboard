@@ -17,6 +17,13 @@ $templates = new League\Plates\Engine(dirname(__FILE__).'/../app/views');
 $router = new League\Route\RouteCollection;
 
 $router->addRoute('GET', '/', 'Controllers\IndexController::index');
+// RouteGroup: User Controller
+$router->get('/users/index', 'Controllers\UsersController::index');
+$router->get('/users/new', 'Controllers\UsersController::new');
+$router->post('/users/create', 'Controllers\UsersController::create');
+$router->get('/users/edit', 'Controllers\UsersController::edit');
+$router->patch('/users/update', 'Controllers\UsersController::update');
+$router->post('/users/delete', 'Controllers\UsersController::delete');
 
 // get dispatcher from router
 $dispatcher = $router->getDispatcher();
