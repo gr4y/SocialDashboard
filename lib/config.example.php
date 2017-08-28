@@ -8,7 +8,7 @@ class Config {
     'host' => '127.0.0.1',
     'name' => 'dashboard',
     'username' => 'dashboard',
-    'password' => '7xv1elEAZ6bkZeDh',
+    'password' => 'p4ssw0rd',
     'driver_options' => [\PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8']
   );
 
