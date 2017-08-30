@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS users;
+
 CREATE TABLE IF NOT EXISTS users (
   id INT AUTO_INCREMENT,
   username VARCHAR(128) NOT NULL,
@@ -5,5 +7,6 @@ CREATE TABLE IF NOT EXISTS users (
   password VARCHAR(255) NOT NULL,
   registerDate DATETIME NOT NULL,
   lastLoginDate DATETIME NOT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+  UNIQUE KEY (email)
 ) ENGINE InnoDB;

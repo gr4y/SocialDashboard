@@ -1,2 +1,2 @@
-<h1>Ich nix Daten,</h1>
-<h3>ich nix anzeigen</h3>
+<h3>Keine Nutzer registriert</h1>
+<p>Willst du einen <a href="new">Neuen Nutzer anlegen</a>?</p>

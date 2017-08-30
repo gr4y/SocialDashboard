@@ -12,20 +12,21 @@
     <title>Social Dashboard <?= (isset($title) ? $this->e("- " . $title): "") ?></title>
   </head>
   <body>
-
     <div class="ui container">
+      <header class="ui header">
+        <h1 class="ui dividing header">Social Dashboard</h1>
+      </header>
 
-      <div class="ui segment">
-
+      <div class="ui content">
         <?php if(isset($title)): ?>
-        <h2 class="page-title"><?= $title; ?></h2>
+        <h2 class="ui header"><?= $title; ?></h2>
         <?php endif; ?>
 
         <?= $this->section('content'); ?>
-
       </div>
-
     </div>
+    <footer class="ui footer">
 
+    </header>
   </body>
 </html>
