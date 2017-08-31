@@ -37,8 +37,7 @@ class SessionsController extends ApplicationController {
     if (session_destroy()) {
       $response->setContent(view('sessions/logged_out'));
     } else {
-      return RedirectResponse::create('');
-
+      $response = RedirectResponse::create('/');
     }
     return $response;
   }
