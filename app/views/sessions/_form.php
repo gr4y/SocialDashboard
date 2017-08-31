@@ -10,6 +10,12 @@
     <input type="password" name="session[password]" />
   </div>
 
+  <div class="field">
+    <?php if($action == 'create'): ?>
+      Keinen Account? Dann <a href="/users/new">registriere dich</a>.
+    <?php endif; ?>
+  </div>
+
   <button type="submit" class="ui button">Login</button>
 
 </form>

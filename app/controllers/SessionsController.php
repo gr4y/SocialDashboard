@@ -17,21 +17,33 @@ class SessionsController extends ApplicationController {
   }
 
   public function create(Request $request, Response $response) {
-    $session = $request->get('session');
-    \ORM::for_table(pluralize('user'))
-      ->where_equal('username', $session['username']);
+    $sessionData = $request->get('session');
+    $user = \Model::factory('User')
+      ->where_equal('username', $sessionData['username'])->find_one();
 
-    var_dump(\ORM::get_query_log());
-#    $out = password_verify($user->get('password'), $session['password']);
+    if(empty($user)) return RedirectResponse::create('/users/new');
 
-    // var_dump($out);
+    if (password_verify($sessionData['password'], $user->password)) {
+      $_SESSION['current_user'] = $user;
+    }
+
+    $response = RedirectResponse::create('/');
 
     return $response;
   }
 
   public function delete(Request $request, Response $response) {
+    unset($_SESSION['current_user']);
+    if (session_destroy()) {
+      $response->setContent(view('sessions/logged_out'));
+    } else {
+      return RedirectResponse::create('');
+
+    }
     return $response;
   }
+
+
 
 }
 

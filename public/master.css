@@ -1,0 +1,18 @@
+.main.container {
+  margin-top: 7em;
+}
+
+.header .logo {
+  margin-right: 1em !important;
+  display: inline-block;
+}
+
+.gravatar {
+  margin-right: 1.25em;
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}

@@ -12,7 +12,6 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
-    'Models\\' => array($baseDir . '/app/models'),
     'League\\Route\\' => array($vendorDir . '/league/route/src'),
     'League\\Plates\\' => array($vendorDir . '/league/plates/src'),
     'League\\Container\\' => array($vendorDir . '/league/container/src'),

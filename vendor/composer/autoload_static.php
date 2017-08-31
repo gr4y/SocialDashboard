@@ -32,10 +32,6 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         array (
             'Psr\\Log\\' => 8,
         ),
-        'M' => 
-        array (
-            'Models\\' => 7,
-        ),
         'L' => 
         array (
             'League\\Route\\' => 13,
@@ -77,10 +73,6 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
-        'Models\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app/models',
-        ),
         'League\\Route\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/route/src',
@@ -103,6 +95,10 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         ),
     );
 
+    public static $fallbackDirsPsr0 = array (
+        0 => __DIR__ . '/../..' . '/app/models',
+    );
+
     public static $classMap = array (
         'CallbackFilterIterator' => __DIR__ . '/..' . '/symfony/polyfill-php54/Resources/stubs/CallbackFilterIterator.php',
         'IdiormMethodMissingException' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
@@ -122,6 +118,7 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr0 = ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937::$fallbackDirsPsr0;
             $loader->classMap = ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937::$classMap;
 
         }, null, ClassLoader::class);
