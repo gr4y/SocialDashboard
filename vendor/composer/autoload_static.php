@@ -11,11 +11,7 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'edc6464955a37aa4d5fbf39d40fb6ee7' => __DIR__ . '/..' . '/symfony/polyfill-php55/bootstrap.php',
         '3e2471375464aac821502deb0ac64275' => __DIR__ . '/..' . '/symfony/polyfill-php54/bootstrap.php',
-        '75114ff88d0fe0413bbfd961d51cb0e3' => __DIR__ . '/..' . '/barnabywalters/mf-cleaner/src/BarnabyWalters/Mf2/Functions.php',
-        '757772e28a0943a9afe83def8db95bdf' => __DIR__ . '/..' . '/mf2/mf2/Mf2/Parser.php',
-        '2721e49db1ade7bd596c9a69d915b3a9' => __DIR__ . '/..' . '/indieweb/link-rel-parser/src/IndieWeb/link_rel_parser.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
-        '3f7691199e1a38145c0e31ed44e0cbce' => __DIR__ . '/..' . '/p3k/multipart/src/p3k/Multipart.php',
         '13b5355d873bc8402507c98de3ba47c6' => __DIR__ . '/../..' . '/lib/config.php',
         '00d2825a126da5113b77839cd20878f7' => __DIR__ . '/../..' . '/lib/helpers.php',
     );
@@ -107,23 +103,16 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         ),
     );
 
-    public static $prefixesPsr0 = array (
-        'I' => 
-        array (
-            'IndieAuth' => 
-            array (
-                0 => __DIR__ . '/..' . '/indieauth/client/src',
-            ),
-        ),
-    );
-
     public static $classMap = array (
         'CallbackFilterIterator' => __DIR__ . '/..' . '/symfony/polyfill-php54/Resources/stubs/CallbackFilterIterator.php',
         'IdiormMethodMissingException' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
         'IdiormResultSet' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
         'IdiormString' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
         'IdiormStringException' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
+        'Model' => __DIR__ . '/..' . '/j4mie/paris/paris.php',
         'ORM' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
+        'ORMWrapper' => __DIR__ . '/..' . '/j4mie/paris/paris.php',
+        'ParisMethodMissingException' => __DIR__ . '/..' . '/j4mie/paris/paris.php',
         'RecursiveCallbackFilterIterator' => __DIR__ . '/..' . '/symfony/polyfill-php54/Resources/stubs/RecursiveCallbackFilterIterator.php',
         'SessionHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php54/Resources/stubs/SessionHandlerInterface.php',
     );
@@ -133,7 +122,6 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937::$classMap;
 
         }, null, ClassLoader::class);

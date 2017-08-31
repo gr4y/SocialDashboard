@@ -10,11 +10,7 @@ return array(
     '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
     'edc6464955a37aa4d5fbf39d40fb6ee7' => $vendorDir . '/symfony/polyfill-php55/bootstrap.php',
     '3e2471375464aac821502deb0ac64275' => $vendorDir . '/symfony/polyfill-php54/bootstrap.php',
-    '75114ff88d0fe0413bbfd961d51cb0e3' => $vendorDir . '/barnabywalters/mf-cleaner/src/BarnabyWalters/Mf2/Functions.php',
-    '757772e28a0943a9afe83def8db95bdf' => $vendorDir . '/mf2/mf2/Mf2/Parser.php',
-    '2721e49db1ade7bd596c9a69d915b3a9' => $vendorDir . '/indieweb/link-rel-parser/src/IndieWeb/link_rel_parser.php',
     '253c157292f75eb38082b5acb06f3f01' => $vendorDir . '/nikic/fast-route/src/functions.php',
-    '3f7691199e1a38145c0e31ed44e0cbce' => $vendorDir . '/p3k/multipart/src/p3k/Multipart.php',
     '13b5355d873bc8402507c98de3ba47c6' => $baseDir . '/lib/config.php',
     '00d2825a126da5113b77839cd20878f7' => $baseDir . '/lib/helpers.php',
 );

@@ -4,48 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "74b17731bb5dae08ec0a4de0fe7371e5",
+    "content-hash": "18613af3dd2e450027cd99353eee2645",
     "packages": [
-        {
-            "name": "barnabywalters/mf-cleaner",
-            "version": "v0.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/barnabywalters/php-mf-cleaner.git",
-                "reference": "ef6a16628db6e8aee2b4f8bb8093d18c24b74cd4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/barnabywalters/php-mf-cleaner/zipball/ef6a16628db6e8aee2b4f8bb8093d18c24b74cd4",
-                "reference": "ef6a16628db6e8aee2b4f8bb8093d18c24b74cd4",
-                "shasum": ""
-            },
-            "require-dev": {
-                "php": ">=5.3",
-                "phpunit/phpunit": "*"
-            },
-            "suggest": {
-                "mf2/mf2": "To parse microformats2 structures from (X)HTML"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/BarnabyWalters/Mf2/Functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Barnaby Walters",
-                    "email": "barnaby@waterpigs.co.uk"
-                }
-            ],
-            "description": "Cleans up microformats2 array structures",
-            "time": "2014-10-06T23:11:15+00:00"
-        },
         {
             "name": "filp/whoops",
             "version": "2.1.10",
@@ -106,91 +66,6 @@
                 "zf2"
             ],
             "time": "2017-08-03T18:23:40+00:00"
-        },
-        {
-            "name": "indieauth/client",
-            "version": "0.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/indieweb/indieauth-client-php.git",
-                "reference": "225ece31ddafaee3348eabdc915422c457498a84"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/indieweb/indieauth-client-php/zipball/225ece31ddafaee3348eabdc915422c457498a84",
-                "reference": "225ece31ddafaee3348eabdc915422c457498a84",
-                "shasum": ""
-            },
-            "require": {
-                "barnabywalters/mf-cleaner": "0.*",
-                "indieweb/link-rel-parser": "0.1.*",
-                "mf2/mf2": "~0.3",
-                "php": ">5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "IndieAuth": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache 2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Aaron Parecki",
-                    "homepage": "http://aaronparecki.com"
-                }
-            ],
-            "description": "IndieAuth Client Library",
-            "time": "2017-07-01T15:43:45+00:00"
-        },
-        {
-            "name": "indieweb/link-rel-parser",
-            "version": "0.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/indieweb/link-rel-parser-php.git",
-                "reference": "295420e4f16d9a9d262a3c25a7a583794428f055"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/indieweb/link-rel-parser-php/zipball/295420e4f16d9a9d262a3c25a7a583794428f055",
-                "reference": "295420e4f16d9a9d262a3c25a7a583794428f055",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/IndieWeb/link_rel_parser.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Aaron Parecki",
-                    "homepage": "http://aaronparecki.com"
-                },
-                {
-                    "name": "Tantek Çelik",
-                    "homepage": "http://tantek.com"
-                }
-            ],
-            "description": "Parse rel values from HTTP headers",
-            "homepage": "https://github.com/indieweb/link-rel-parser-php",
-            "keywords": [
-                "http",
-                "indieweb",
-                "microformats2"
-            ],
-            "time": "2017-01-11T17:14:49+00:00"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -294,6 +169,69 @@
                 "query builder"
             ],
             "time": "2017-03-21T01:31:25+00:00"
+        },
+        {
+            "name": "j4mie/paris",
+            "version": "v1.5.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/j4mie/paris.git",
+                "reference": "ec43a1f7f59d237c147495d29523da52e375f9e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/j4mie/paris/zipball/ec43a1f7f59d237c147495d29523da52e375f9e7",
+                "reference": "ec43a1f7f59d237c147495d29523da52e375f9e7",
+                "shasum": ""
+            },
+            "require": {
+                "j4mie/idiorm": "1.5.*",
+                "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "paris.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause",
+                "BSD-3-Clause",
+                "BSD-4-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Simon Holywell",
+                    "email": "treffynnon@php.net",
+                    "homepage": "http://simonholywell.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Jamie Matthews",
+                    "email": "jamie.matthews@gmail.com",
+                    "homepage": "http://j4mie.org",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Durham Hale",
+                    "email": "me@durhamhale.com",
+                    "homepage": "http://durhamhale.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "A lightweight Active Record implementation for PHP5, built on top of Idiorm",
+            "homepage": "http://j4mie.github.com/idiormandparis",
+            "keywords": [
+                "Active Record",
+                "model",
+                "orm",
+                "paris"
+            ],
+            "time": "2017-03-21T02:13:30+00:00"
         },
         {
             "name": "league/container",
@@ -467,61 +405,6 @@
             "time": "2015-09-11T07:40:31+00:00"
         },
         {
-            "name": "mf2/mf2",
-            "version": "v0.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/indieweb/php-mf2.git",
-                "reference": "dc0d90d4ee30864bcf37cd3a8fc8db94f9134cc4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/indieweb/php-mf2/zipball/dc0d90d4ee30864bcf37cd3a8fc8db94f9134cc4",
-                "reference": "dc0d90d4ee30864bcf37cd3a8fc8db94f9134cc4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "mf2/tests": "@dev",
-                "phpdocumentor/phpdocumentor": "v2.8.4",
-                "phpunit/phpunit": "4.8.*"
-            },
-            "suggest": {
-                "barnabywalters/mf-cleaner": "To more easily handle the canonical data php-mf2 gives you"
-            },
-            "bin": [
-                "bin/fetch-mf2",
-                "bin/parse-mf2"
-            ],
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "Mf2/Parser.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "CC0"
-            ],
-            "authors": [
-                {
-                    "name": "Barnaby Walters",
-                    "homepage": "http://waterpigs.co.uk"
-                }
-            ],
-            "description": "A pure, generic microformats2 parser — makes HTML as easy to consume as a JSON API",
-            "keywords": [
-                "html",
-                "microformats",
-                "microformats 2",
-                "parser",
-                "semantic"
-            ],
-            "time": "2017-05-27T15:27:47+00:00"
-        },
-        {
             "name": "nikic/fast-route",
             "version": "v0.8.0",
             "source": {
@@ -563,42 +446,6 @@
                 "routing"
             ],
             "time": "2016-03-25T23:46:52+00:00"
-        },
-        {
-            "name": "p3k/multipart",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aaronpk/php-multipart-encoder.git",
-                "reference": "c190b4692b872a359868faba11251ead842ac20f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aaronpk/php-multipart-encoder/zipball/c190b4692b872a359868faba11251ead842ac20f",
-                "reference": "c190b4692b872a359868faba11251ead842ac20f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/p3k/Multipart.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache 2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Aaron Parecki",
-                    "homepage": "http://aaronparecki.com"
-                }
-            ],
-            "description": "Multipart Encoding Library",
-            "time": "2016-12-28T14:50:41+00:00"
         },
         {
             "name": "psr/log",
@@ -649,16 +496,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v2.8.26",
+            "version": "v2.8.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "9ff3a0b3756ace2e3da7dded37e920ee776faa4e"
+                "reference": "fc4942ad82af83ac8301b68d0c9b1bbcc95a84c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/9ff3a0b3756ace2e3da7dded37e920ee776faa4e",
-                "reference": "9ff3a0b3756ace2e3da7dded37e920ee776faa4e",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/fc4942ad82af83ac8301b68d0c9b1bbcc95a84c6",
+                "reference": "fc4942ad82af83ac8301b68d0c9b1bbcc95a84c6",
                 "shasum": ""
             },
             "require": {
@@ -700,7 +547,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-17T14:02:19+00:00"
+            "time": "2017-08-10T07:04:10+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
