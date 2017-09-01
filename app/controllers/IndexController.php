@@ -8,7 +8,7 @@ use Models;
 /*
  * This is the Main Controller
  */
-class IndexController extends ApplicationController {
+class IndexController {
 
   public function index(Request $request, Response $response) {
     $response->setContent(view('index'));

@@ -9,7 +9,7 @@ use Models;
 /**
  * This controller handles everything related to registration and/or login.
  */
-class SessionsController extends ApplicationController {
+class SessionsController {
 
   public function new(Request $request, Response $response) {
     $response->setContent(view('sessions/new'));

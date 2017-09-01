@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 /**
  * This controller handles everything related to registration and/or login.
  */
-class UsersController extends ApplicationController {
+class UsersController {
 
   public function index(Request $request, Response $response) {
     if(currentUser() != null && currentUser()->hasRole('admin')) {
