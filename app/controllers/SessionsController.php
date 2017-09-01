@@ -21,14 +21,12 @@ class SessionsController extends ApplicationController {
     $user = \Model::factory('User')
       ->where_equal('username', $sessionData['username'])->find_one();
 
-    if(empty($user)) return RedirectResponse::create('/users/new');
-
+    if (empty($user)) return RedirectResponse::create('/users/new');
     if (password_verify($sessionData['password'], $user->password)) {
       session()->set('current_user', $user);
     }
 
     $response = RedirectResponse::create('/');
-
     return $response;
   }
 

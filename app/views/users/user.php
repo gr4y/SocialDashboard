@@ -2,8 +2,8 @@
   <td><?= $user->get('id'); ?></td>
   <td><?= $user->get('username'); ?></td>
   <td><?= $user->get('email'); ?></td>
-  <td><?= $user->get('registerDate'); ?></td>
-  <td><?= $user->get('lastLoginDate'); ?></td>
+  <td><?= $user->get('registration_date'); ?></td>
+  <td><?= $user->get('last_login_date'); ?></td>
   <td><?= strlen($user->get('password')) > 0 ? '&#x2714;' : ''; ?></td>
   <td>
     <form method="post" action="delete">

@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 INSERT INTO users (username, email, `password`, `role_id`, registration_date)
 VALUES ( 'admin', 'admin@example.com', '$2y$05$5cQuysBmK9eGOWvnc0vSkuBwHE1qWT9gTR19nC2IyTa2p7tnVIY7i',
-  999, 'NOW()' );
+  999, 'NOW' );
 
 DROP TABLE IF EXISTS roles;
 CREATE TABLE IF NOT EXISTS roles (
