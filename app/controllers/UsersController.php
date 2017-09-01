@@ -11,12 +11,13 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 class UsersController extends ApplicationController {
 
   public function index(Request $request, Response $response) {
-    // if(currentUser() != null && currentUser()->hasRole('admin')) {
+    if(currentUser() != null && currentUser()->hasRole('admin')) {
       $users = \Model::factory('User')->find_many();
       $response->setContent(view('users/index', ['users' => $users]));
-    // } else {
-      // $response = RedirectResponse::create('/');
-    // }
+    } else {
+      session()->getFlashBag()->set('info', view('not_allowed'));
+      $response = RedirectResponse::create('/');
+    }
     return $response;
   }
 

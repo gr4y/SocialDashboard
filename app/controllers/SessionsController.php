@@ -24,7 +24,7 @@ class SessionsController extends ApplicationController {
     if(empty($user)) return RedirectResponse::create('/users/new');
 
     if (password_verify($sessionData['password'], $user->password)) {
-      $_SESSION['current_user'] = $user;
+      session()->set('current_user', $user);
     }
 
     $response = RedirectResponse::create('/');
@@ -33,12 +33,12 @@ class SessionsController extends ApplicationController {
   }
 
   public function delete(Request $request, Response $response) {
-    unset($_SESSION['current_user']);
-    if (session_destroy()) {
-      $response->setContent(view('sessions/logged_out'));
-    } else {
-      $response = RedirectResponse::create('/');
-    }
+    // remove current user from session
+    session()->remove('current_user');
+    // set flash message
+    flash()->set('success', view('sessions/logged_out'));
+    // redirect to /
+    $response = RedirectResponse::create('/');
     return $response;
   }
 

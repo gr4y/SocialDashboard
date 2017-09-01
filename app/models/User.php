@@ -4,7 +4,7 @@ class User extends Model {
   public static $_table = 'users';
 
   public function role() {
-    return $this->has_one('Role');
+    return $this->belongs_to('Role');
   }
 
   public function hasRole($role) {

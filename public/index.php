@@ -4,8 +4,10 @@ require 'vendor/autoload.php';
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\Session;
 
-session_start();
+$session = new Session();
+$session->start();
 
 // Pretty Exception Handling by Whoops
 $whoops = new \Whoops\Run;

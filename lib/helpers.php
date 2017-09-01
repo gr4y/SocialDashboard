@@ -13,6 +13,21 @@ function view($template, $data=[]) {
   return $templates->render($template, $data);
 }
 
+/**
+ * A wrapper method to use Symfony Session, which is defined in public/index.php
+ */
+function session(){
+  global $session;
+  return $session;
+}
+
+/**
+ * A wrapper method to simply use Symfony FlashBag
+ */
+function flash() {
+  return session()->getFlashBag();
+}
+
 function hashPassword($unhashed_password) {
   return password_hash($unhashed_password, PASSWORD_BCRYPT, [
    'cost' => 5,
@@ -21,8 +36,8 @@ function hashPassword($unhashed_password) {
 }
 
 function currentUser() {
-  if($_SESSION == null || $_SESSION['current_user'] == null) return null;
-  return $_SESSION['current_user'];
+  $current_user = session()->get('current_user');
+  return $current_user;
 }
 
 function gravatar_path($email) {

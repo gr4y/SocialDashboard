@@ -52,9 +52,19 @@
     </header>
 
     <div class="ui main container">
+      <?php foreach(['error', 'warning', 'info', 'success'] as $flashType): ?>
+        <?php foreach (flash()->get($flashType, array()) as $message): ?>
+          <div class="ui message <?= $flashType ?>">
+            <i class="close icon"></i>
+            <?= $message ?>
+          </div>
+        <?php endforeach; ?>
+      <?php endforeach; ?>
+
       <?php if(isset($title)): ?>
-      <h1 class="ui header"><?= $title; ?></h1>
+        <h1 class="ui header"><?= $title; ?></h1>
       <?php endif; ?>
+
       <?= $this->section('content'); ?>
     </div>
 
