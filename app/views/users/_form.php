@@ -29,14 +29,14 @@
     <div class="field">
       <label for="user[password]">Passwort: </label>
       <div class="ui input">
-        <input type="text" name="user[password]"/>
+        <input type="password" name="user[password]"/>
       </div>
     </div>
 
     <div class="field">
       <label for="user[password_verification]">Passwort wiederholen: </label>
       <div class="ui input">
-        <input type="text" name="user[password_verification]"/>
+        <input type="password" name="user[password_verification]"/>
       </div>
     </div>
   </div>

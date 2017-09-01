@@ -34,7 +34,7 @@ class SessionsController {
     // remove current user from session
     session()->remove('current_user');
     // set flash message
-    flash()->set('success', view('sessions/logged_out'));
+    flash()->set('success', view('sessions/msg/logged_out'));
     // redirect to /
     $response = RedirectResponse::create('/');
     return $response;

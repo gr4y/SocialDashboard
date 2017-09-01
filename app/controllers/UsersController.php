@@ -15,7 +15,7 @@ class UsersController {
       $users = \Model::factory('User')->find_many();
       $response->setContent(view('users/index', ['users' => $users]));
     } else {
-      session()->getFlashBag()->set('info', view('not_allowed'));
+      session()->getFlashBag()->set('info', view('msg/not_allowed'));
       $response = RedirectResponse::create('/');
     }
     return $response;
