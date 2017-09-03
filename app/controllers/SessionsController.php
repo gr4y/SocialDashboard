@@ -11,6 +11,8 @@ use Models;
  */
 class SessionsController {
 
+  const USER_ID = 'userId';
+
   public function new(Request $request, Response $response) {
     $response->setContent(view('sessions/new'));
     return $response;
@@ -23,7 +25,7 @@ class SessionsController {
 
     if (empty($user)) return RedirectResponse::create('/users/new');
     if (password_verify($sessionData['password'], $user->password)) {
-      session()->set('current_user', $user);
+      session()->set(self::USER_ID, $user->id);
     }
 
     $response = RedirectResponse::create('/');
@@ -32,7 +34,7 @@ class SessionsController {
 
   public function delete(Request $request, Response $response) {
     // remove current user from session
-    session()->remove('current_user');
+    session()->remove(self::USER_ID);
     // set flash message
     flash()->set('success', view('sessions/msg/logged_out'));
     // redirect to /

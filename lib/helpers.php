@@ -36,8 +36,9 @@ function hashPassword($unhashed_password) {
 }
 
 function currentUser() {
-  $current_user = session()->get('current_user');
-  return $current_user;
+  $userId = session()->get(\Controllers\SessionsController::USER_ID);
+  if ($userId == null) return; 
+  return Model::factory('User')->find_one($userId);
 }
 
 function gravatar_path($email) {
