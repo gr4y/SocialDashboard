@@ -7,11 +7,6 @@ namespace Composer\Autoload;
 class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
 {
     public static $files = array (
-        'e40631d46120a9c38ea139981f8dab26' => __DIR__ . '/..' . '/ircmaxell/password-compat/lib/password.php',
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        'edc6464955a37aa4d5fbf39d40fb6ee7' => __DIR__ . '/..' . '/symfony/polyfill-php55/bootstrap.php',
-        '3e2471375464aac821502deb0ac64275' => __DIR__ . '/..' . '/symfony/polyfill-php54/bootstrap.php',
-        '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '13b5355d873bc8402507c98de3ba47c6' => __DIR__ . '/../..' . '/lib/config.php',
         '00d2825a126da5113b77839cd20878f7' => __DIR__ . '/../..' . '/lib/helpers.php',
     );
@@ -21,26 +16,13 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         array (
             'Whoops\\' => 7,
         ),
-        'S' => 
-        array (
-            'Symfony\\Polyfill\\Php55\\' => 23,
-            'Symfony\\Polyfill\\Php54\\' => 23,
-            'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Component\\HttpFoundation\\' => 33,
-        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
         ),
         'L' => 
         array (
-            'League\\Route\\' => 13,
             'League\\Plates\\' => 14,
-            'League\\Container\\' => 17,
-        ),
-        'F' => 
-        array (
-            'FastRoute\\' => 10,
         ),
         'C' => 
         array (
@@ -53,41 +35,13 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
         ),
-        'Symfony\\Polyfill\\Php55\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php55',
-        ),
-        'Symfony\\Polyfill\\Php54\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php54',
-        ),
-        'Symfony\\Polyfill\\Mbstring\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
-        ),
-        'Symfony\\Component\\HttpFoundation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/http-foundation',
-        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
-        'League\\Route\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/league/route/src',
-        ),
         'League\\Plates\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/plates/src',
-        ),
-        'League\\Container\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/league/container/src',
-        ),
-        'FastRoute\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
         'Controllers\\' => 
         array (
@@ -100,7 +54,6 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
     );
 
     public static $classMap = array (
-        'CallbackFilterIterator' => __DIR__ . '/..' . '/symfony/polyfill-php54/Resources/stubs/CallbackFilterIterator.php',
         'IdiormMethodMissingException' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
         'IdiormResultSet' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
         'IdiormString' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
@@ -109,8 +62,6 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         'ORM' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
         'ORMWrapper' => __DIR__ . '/..' . '/j4mie/paris/paris.php',
         'ParisMethodMissingException' => __DIR__ . '/..' . '/j4mie/paris/paris.php',
-        'RecursiveCallbackFilterIterator' => __DIR__ . '/..' . '/symfony/polyfill-php54/Resources/stubs/RecursiveCallbackFilterIterator.php',
-        'SessionHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php54/Resources/stubs/SessionHandlerInterface.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

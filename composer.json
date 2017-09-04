@@ -3,7 +3,6 @@
   "require": {
     "j4mie/paris": "1.5.*",
     "league/plates": "^3.3",
-    "league/route": "1.*",
     "filp/whoops": "^2.1"
   },
   "autoload": {
