@@ -3,7 +3,9 @@
   "require": {
     "j4mie/paris": "1.5.*",
     "league/plates": "^3.3",
-    "filp/whoops": "^2.1"
+    "filp/whoops": "^2.1",
+    "nikic/fast-route": "^1.2",
+    "symfony/http-foundation": "^3.3"
   },
   "autoload": {
     "psr-0": {

@@ -7,7 +7,10 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'League\\Plates\\' => array($vendorDir . '/league/plates/src'),
+    'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),
     'Controllers\\' => array($baseDir . '/app/controllers'),
 );
