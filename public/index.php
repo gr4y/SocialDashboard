@@ -32,7 +32,7 @@ $routeCallback = function(RouteCollector $r) {
   });
   $r->addGroup('/sessions', function(RouteCollector $rs){
     $rs->get('/new', 'Controllers\SessionsController::new');
-    $rs->get('/create', 'Controllers\SessionsController::create');
+    $rs->post('/create', 'Controllers\SessionsController::create');
     $rs->post('/delete', 'Controllers\SessionsController::delete');
   });
 };
