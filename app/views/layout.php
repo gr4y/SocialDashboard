@@ -42,7 +42,7 @@
                 <button type="submit" class="ui button">Logout</button>
               </form>
               <!-- /LogoutForm -->
-              <a href="/users/edit?id=<?= currentUser()->id; ?>" class="item">Edit Account</a>
+              <a href="/users/edit/<?= currentUser()->id; ?>" class="item">Edit Account</a>
               <div class="divider"></div>
               <a href="javascript:void();" class="item" onclick="$('#logoutForm button').click();">Logout</a>
             </div>
