@@ -2,59 +2,76 @@
 chdir(dirname(__FILE__).'/..');
 require 'vendor/autoload.php';
 
+use FastRoute\RouteCollector as RouteCollector;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
-
-$session = new Session();
-$session->start();
 
 // Pretty Exception Handling by Whoops
 $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
-// initialize template engine
+// Init Session
+$session = new Session();
+$session->start();
+
+// Init Template Engine
 $templates = new League\Plates\Engine(dirname(__FILE__).'/../app/views');
 
-// initialize router
-$router = new League\Route\RouteCollection;
+// Register Routes
+$routeCallback = function(RouteCollector $r) {
+  $r->get('/', 'Controllers\IndexController::index');
+  $r->addGroup('/users', function(RouteCollector $rs){
+    $rs->get('/index', 'Controllers\UsersController::index');
+    $rs->get('/new', 'Controllers\UsersController::new');
+    $rs->post('/create', 'Controllers\UsersController::create');
+    $rs->get('/edit/{id:\d+}', 'Controllers\UsersController::edit');
+    $rs->post('/update', 'Controllers\UsersController::update');
+    $rs->post('/delete', 'Controllers\UsersController::delete');
+  });
+  $r->addGroup('/sessions', function(RouteCollector $rs){
+    $rs->get('/new', 'Controllers\SessionsController::new');
+    $rs->get('/create', 'Controllers\SessionsController::create');
+    $rs->post('/delete', 'Controllers\SessionsController::delete');
+  });
+};
 
-$router->addRoute('GET', '/', 'Controllers\IndexController::index');
+// Init Dispatcher
+$dispatcher = FastRoute\simpleDispatcher($routeCallback);
 
-// RouteGroup: User Controller
-$router->get('/users/index', 'Controllers\UsersController::index');
-$router->get('/users/new', 'Controllers\UsersController::new');
-$router->post('/users/create', 'Controllers\UsersController::create');
-$router->get('/users/edit', 'Controllers\UsersController::edit');
-$router->post('/users/update', 'Controllers\UsersController::update');
-$router->post('/users/delete', 'Controllers\UsersController::delete');
-
-$router->get('/sessions/new', 'Controllers\SessionsController::new');
-$router->post('/sessions/create', 'Controllers\SessionsController::create');
-$router->post('/sessions/delete', 'Controllers\SessionsController::delete');
-
-
-// get dispatcher from router
-$dispatcher = $router->getDispatcher();
-
-// create request
+// Init Request
 $request = Request::createFromGlobals();
 
-try {
-  $response = $dispatcher->dispatch($request->getMethod(), $request->getPathInfo());
-  $response->send();
-} catch(League\Route\Http\Exception\NotFoundException $e) {
-  $response = new Response;
-  $response->setStatusCode(404);
-  $response->setContent("Not Found\n");
-  $response->send();
-} catch(League\Route\Http\Exception\MethodNotAllowedException $e) {
-  $response = new Response;
-  $response->setStatusCode(405);
-  $response->setContent("Method not allowed\n");
-  $response->send();
+// A dispatcher does what a dispatcher does... Like the spiderpig.
+$route = $dispatcher->dispatch($request->getMethod(), $request->getPathInfo());
+
+// Init Response
+$response = new Response();
+
+// Handling of route
+switch($route[0]){
+  case FastRoute\Dispatcher::NOT_FOUND:
+    $response->setStatusCode(Response::HTTP_NOT_FOUND);
+    $response->setContent(
+      view('msg/not_found')
+    );
+    break;
+  case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
+    $response->setStatusCode(Response::HTTP_METHOD_NOT_ALLOWED);
+    $response->setContent(
+      view('msg/method_not_allowed', ['allowed_methods' => $route[1]])
+    );
+    break;
+  case FastRoute\Dispatcher::FOUND:
+    // Replace Query Params in Request with Route Path Params
+    $pathParams = $route[2];
+    if(!empty($pathParams)) $request->query->replace($pathParams);
+    $handler = $route[1];
+    // Run the Handler
+    $response = $handler($request, $response);
+  break;
 }
 
-
-?>
+// Send Repsonse
+$response->send();
