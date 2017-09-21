@@ -11,6 +11,7 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '13b5355d873bc8402507c98de3ba47c6' => __DIR__ . '/../..' . '/lib/config.php',
         '00d2825a126da5113b77839cd20878f7' => __DIR__ . '/../..' . '/lib/helpers.php',
+        'e1811166d10483f3cf0d47bd796b232e' => __DIR__ . '/../..' . '/lib/application.php',
     );
 
     public static $prefixLengthsPsr4 = array (

@@ -16,7 +16,8 @@
     },
     "files": [
       "lib/config.php",
-      "lib/helpers.php"
+      "lib/helpers.php",
+      "lib/application.php"
     ]
   }
 }

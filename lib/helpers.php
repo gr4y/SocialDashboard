@@ -9,16 +9,16 @@ ORM::configure('driver_options', $dbConf['driver_options']);
 ORM::configure('logging', true);
 
 function view($template, $data=[]) {
-  global $templates;
-  return $templates->render($template, $data);
+  global $app;
+  return $app->getTemplateEngine()->render($template, $data);
 }
 
 /**
  * A wrapper method to use Symfony Session, which is defined in public/index.php
  */
 function session(){
-  global $session;
-  return $session;
+  global $app;
+  return $app->getSession();
 }
 
 /**
@@ -37,7 +37,7 @@ function hashPassword($unhashed_password) {
 
 function currentUser() {
   $userId = session()->get(\Controllers\SessionsController::USER_ID);
-  if ($userId == null) return; 
+  if ($userId == null) return;
   return Model::factory('User')->find_one($userId);
 }
 

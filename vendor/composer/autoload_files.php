@@ -10,4 +10,5 @@ return array(
     '253c157292f75eb38082b5acb06f3f01' => $vendorDir . '/nikic/fast-route/src/functions.php',
     '13b5355d873bc8402507c98de3ba47c6' => $baseDir . '/lib/config.php',
     '00d2825a126da5113b77839cd20878f7' => $baseDir . '/lib/helpers.php',
+    'e1811166d10483f3cf0d47bd796b232e' => $baseDir . '/lib/application.php',
 );
