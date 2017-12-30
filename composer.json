@@ -1,23 +1,17 @@
 {
   "license": "MIT",
   "require": {
-    "j4mie/paris": "1.5.*",
-    "league/plates": "^3.3",
-    "filp/whoops": "^2.1",
-    "nikic/fast-route": "^1.2",
-    "symfony/http-foundation": "^3.3"
+    "gr4y/mini-mvc": "dev-master"
   },
   "autoload": {
-    "psr-0": {
-      "": "app/models/"
-    },
     "psr-4": {
-      "Controllers\\": "app/controllers/"
+      "SocialDashboard\\Controllers\\": "SocialDashboard/Controllers/",
+      "SocialDashboard\\Models\\": "SocialDashboard/Models/"
+
     },
     "files": [
-      "lib/config.php",
-      "lib/helpers.php",
-      "lib/application.php"
+      "SocialDashboard/Config.php",
+      "SocialDashboard/Helpers.php"
     ]
   }
 }

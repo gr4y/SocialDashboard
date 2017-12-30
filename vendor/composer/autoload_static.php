@@ -4,14 +4,15 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
+class ComposerStaticInit28c43013be228e0061579e85c3cc4ed5
 {
     public static $files = array (
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
-        '13b5355d873bc8402507c98de3ba47c6' => __DIR__ . '/../..' . '/lib/config.php',
-        '00d2825a126da5113b77839cd20878f7' => __DIR__ . '/../..' . '/lib/helpers.php',
-        'e1811166d10483f3cf0d47bd796b232e' => __DIR__ . '/../..' . '/lib/application.php',
+        'c6bf93eac7c29bb2e090521c72223131' => __DIR__ . '/../..' . '/SocialDashboard/Config.php',
+        'c236b22f7e421b38a8071a98d3671ee2' => __DIR__ . '/../..' . '/SocialDashboard/Helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -21,12 +22,19 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         ),
         'S' => 
         array (
+            'Symfony\\Polyfill\\Php70\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\HttpFoundation\\' => 33,
+            'SocialDashboard\\Models\\' => 23,
+            'SocialDashboard\\Controllers\\' => 28,
         ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
+        ),
+        'M' => 
+        array (
+            'MiniMVC\\' => 8,
         ),
         'L' => 
         array (
@@ -36,16 +44,16 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         array (
             'FastRoute\\' => 10,
         ),
-        'C' => 
-        array (
-            'Controllers\\' => 12,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
+        ),
+        'Symfony\\Polyfill\\Php70\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php70',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -55,9 +63,21 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
         ),
+        'SocialDashboard\\Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/SocialDashboard/Models',
+        ),
+        'SocialDashboard\\Controllers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/SocialDashboard/Controllers',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'MiniMVC\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gr4y/mini-mvc/MiniMVC',
         ),
         'League\\Plates\\' => 
         array (
@@ -67,17 +87,13 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
-        'Controllers\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app/controllers',
-        ),
-    );
-
-    public static $fallbackDirsPsr0 = array (
-        0 => __DIR__ . '/../..' . '/app/models',
     );
 
     public static $classMap = array (
+        'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
+        'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+        'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
+        'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
         'IdiormMethodMissingException' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
         'IdiormResultSet' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
         'IdiormString' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
@@ -86,15 +102,17 @@ class ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937
         'ORM' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
         'ORMWrapper' => __DIR__ . '/..' . '/j4mie/paris/paris.php',
         'ParisMethodMissingException' => __DIR__ . '/..' . '/j4mie/paris/paris.php',
+        'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
+        'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
+        'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr0 = ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937::$fallbackDirsPsr0;
-            $loader->classMap = ComposerStaticInit6f4e4108b7a43c2ef46756ec5ec88937::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit28c43013be228e0061579e85c3cc4ed5::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit28c43013be228e0061579e85c3cc4ed5::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit28c43013be228e0061579e85c3cc4ed5::$classMap;
 
         }, null, ClassLoader::class);
     }

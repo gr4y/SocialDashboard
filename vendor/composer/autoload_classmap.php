@@ -6,6 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
+    'AssertionError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+    'DivisionByZeroError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
+    'Error' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/Error.php',
     'IdiormMethodMissingException' => $vendorDir . '/j4mie/idiorm/idiorm.php',
     'IdiormResultSet' => $vendorDir . '/j4mie/idiorm/idiorm.php',
     'IdiormString' => $vendorDir . '/j4mie/idiorm/idiorm.php',
@@ -14,4 +18,7 @@ return array(
     'ORM' => $vendorDir . '/j4mie/idiorm/idiorm.php',
     'ORMWrapper' => $vendorDir . '/j4mie/paris/paris.php',
     'ParisMethodMissingException' => $vendorDir . '/j4mie/paris/paris.php',
+    'ParseError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
+    'SessionUpdateTimestampHandlerInterface' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
+    'TypeError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
 );

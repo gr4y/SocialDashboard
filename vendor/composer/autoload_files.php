@@ -6,9 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    '5255c38a0faeba867671b61dfda6d864' => $vendorDir . '/paragonie/random_compat/lib/random.php',
+    '023d27dca8066ef29e6739335ea73bad' => $vendorDir . '/symfony/polyfill-php70/bootstrap.php',
     '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
     '253c157292f75eb38082b5acb06f3f01' => $vendorDir . '/nikic/fast-route/src/functions.php',
-    '13b5355d873bc8402507c98de3ba47c6' => $baseDir . '/lib/config.php',
-    '00d2825a126da5113b77839cd20878f7' => $baseDir . '/lib/helpers.php',
-    'e1811166d10483f3cf0d47bd796b232e' => $baseDir . '/lib/application.php',
+    'c6bf93eac7c29bb2e090521c72223131' => $baseDir . '/SocialDashboard/Config.php',
+    'c236b22f7e421b38a8071a98d3671ee2' => $baseDir . '/SocialDashboard/Helpers.php',
 );

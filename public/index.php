@@ -1,4 +1,7 @@
 <?php
+
+use \MiniMVC\Application as Application;
+
 // get current working directory
 $currentDir = dirname(__FILE__);
 
@@ -6,26 +9,14 @@ $currentDir = dirname(__FILE__);
 chdir($currentDir.'/..');
 
 // require autoloader
-require 'vendor/autoload.php';
+$loader = require join(DIRECTORY_SEPARATOR, ['vendor', 'autoload.php']);
+
+if(!defined('APP_PATH')) 
+  define('APP_PATH', 'SocialDashboard');
+
+$viewsPath = join(DIRECTORY_SEPARATOR, [$currentDir, '..', APP_PATH, 'Views']);
 
 // initialize the application
-$app = new \Application($currentDir);
-// add routes
-$app->declareRoutes(function(\FastRoute\RouteCollector $r) {
-  $r->get('/', 'Controllers\IndexController::index');
-  $r->addGroup('/users', function(\FastRoute\RouteCollector $rs){
-    $rs->get('/index', 'Controllers\UsersController::index');
-    $rs->get('/new', 'Controllers\UsersController::new');
-    $rs->post('/create', 'Controllers\UsersController::create');
-    $rs->get('/edit/{id:\d+}', 'Controllers\UsersController::edit');
-    $rs->post('/update', 'Controllers\UsersController::update');
-    $rs->post('/delete', 'Controllers\UsersController::delete');
-  });
-  $r->addGroup('/sessions', function(\FastRoute\RouteCollector $rs){
-    $rs->get('/new', 'Controllers\SessionsController::new');
-    $rs->post('/create', 'Controllers\SessionsController::create');
-    $rs->post('/delete', 'Controllers\SessionsController::delete');
-  });
-});
+$app = new Application($currentDir, $viewsPath);
 // actually run the application
-$app->run();
+$app->run($loader);
